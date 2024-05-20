@@ -1,0 +1,348 @@
+@charset "UTF-8";
+
+body{
+    background-color:rgb(7, 236, 248);
+    margin: 0%;
+	padding: 0%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+@media screen and (max-width: 320px) { 
+    .main-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .menubar ul ul {
+        display: none; /* پنهان کردن منو زیری */
+    }
+    
+    .navbar:hover + .menubar ul ul {
+        display: block; /* نمایش منو زیری هنگام هاور بر روی آیکون منو */
+    }
+    
+    /*.menubar ul li {
+        display: block;
+    }
+    
+    .menubar .more ul {
+        display: block;
+    }
+    
+    .menubar .more a {
+        display: block;
+    }
+    */
+
+    .main-page .login-form{
+        position: relative;
+        margin-bottom: 7px;
+    }
+    
+    .main-page img, 
+    .main-page h2,
+    .main-page .login-form{
+        margin: auto ;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* priority */
+    .main-page h2 { order : 1;}
+    .main-page img {order : 2;}
+    .main-page .login-form {order : 3;}
+    .main-page .menubar{order: 4;}
+}
+
+
+
+.navbar:hover + .menubar{
+    position: fixed;
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+    
+}
+
+
+.main-page img:hover {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease;
+}
+
+
+
+.main-page h2{
+    display: block;
+    text-align: left;
+    margin-bottom: 1px;
+    margin-top: 0px;
+}
+
+.main-page  {
+	background-color: rgb(93, 190, 241);
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    padding: 1px;
+    margin-bottom: 0px;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding-bottom: 0px;
+    height: max-content;
+
+}
+
+.main-page .login-form{
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section1 h5{
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 0px;
+
+}
+
+.footer-section1 i{
+    padding: 10px;
+    margin: -5px;
+}
+
+.footer-section1{
+    display: flex;
+    flex-direction: row;
+    padding: 2 px;
+    margin: 2 px;
+    text-align: center;
+    justify-content: center;
+    flex-grow: space;
+}
+
+.footer{
+	background-color: rgb(135, 204, 241);
+    text-shadow: -8px 3px 3px rgba(90, 88, 94, 0.5);
+    display: flex;
+    flex-direction: column;
+    top: 20px;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login-form{    
+    position: absolute;
+    right: 0px;
+    width: 170px;
+    text-align: center;
+    color: rgb(0, 5, 2);
+    font-style:italic;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+p{
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+}
+
+.btn-positive{
+    background-color: rgb(107, 250, 107);
+    border-radius: 1px;
+    border-style: solid;
+    margin-top: 5px;
+}
+
+.btn-negative{
+    margin-top: 5px;
+    background-color: rgb(247, 63, 63);
+    border-radius: 1px;
+    border-style: solid;
+}
+
+.login-form .form-element{
+    margin-bottom: 1.5px;
+    margin-top: 1.5px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container .sub-main .coloum .left img{
+    width:40%;
+    height:auto;
+    transform-origin: top right;
+    transform: rotate(377deg);
+    padding-left: 5rem;
+}
+
+.container .sub-main .coloum .right img{
+    width:40%;
+    height:auto;
+    transform-origin: top right;
+    transform: rotate(377deg);
+    padding-top: 3rem;
+    padding-left: 5rem;
+}
+
+.container .sub-main .coloum {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-main  {
+	background-color: rgb(7, 236, 248);
+    margin-top: 0;
+    display: grid;
+    border-radius: 5px;
+    border: chocolate;
+    grid-template-columns: repeat(3,1fr);
+    grid: gap 0;
+    padding: 10px;
+    margin-right: 10px;
+    white-space:nowrap;
+    margin-top: 20px;
+    max-width: 60%;
+    justify-content: space-between;
+}
+
+.container aside{
+    background-color: rgb(91, 241, 241);
+    font-family: vazir;
+    font-size: 1.5 rem;
+    text-align: center;
+    text-decoration-color: rgb(22, 21, 21);
+}
+
+.sub-main p{
+    justify-content: center;
+    color: blueviolet;
+    text-align: center;
+    position: relative;
+    white-space:nowrap;
+    font-style:oblique;
+    font-size: 1.5rem;
+    margin: 3px;
+}
+
+.sub-main col-1 h1,
+.sub-main col-1 h2{
+    text-align: center;
+    color: bisque;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-100%);
+    bottom: 10px;
+    left: 50%;
+    margin: 0;
+    margin-left: 200px;
+}
+
+.menubar{
+    padding: 0px;
+    height:max-content;
+    display: inline-flex;
+    justify-content:flex-end;
+    margin-top: -20px;
+}
+
+.footer h5{
+    margin: 0;
+    margin-top: 0;
+}
+
+.menubar ul li:hover ul {
+    display: block;
+    margin-bottom: 0;
+}
+
+
+.menubar ul{
+    background-color: rgb(20, 131, 55);
+    padding: 0;
+    list-style-type: none;
+    display: inline-block;   
+    margin-bottom: 0;
+}
+
+.menubar ul li a{
+    list-style-type: none;
+    color: #fcfcfc;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0;    
+    margin-bottom: 0;
+}
+
+.menubar ul li ul {
+    display: none;
+    width: 100%;
+    left: 0; 
+    position: absolute;
+    margin-bottom: 0;
+}
+
+.menubar ul li {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.col-1{
+    width: 16.66666666666667%;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.col-2{
+    width: 33.33333333333333%;
+    margin-left: 50px;
+    position: relative;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.col-3{
+    width: 50.00000000000001%;
+    margin-left: 10px;
+    margin-top: 30px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.col-4{
+    width: 66.66666666666668%;
+    margin-left: 10px;
+    margin-top: 30px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.col-5{
+    width: 83.33333333333335%;
+    margin-left: 10px;
+    margin-top: 30px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.col-6{
+    width: 100%;
+}
